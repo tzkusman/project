@@ -1,0 +1,146 @@
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styles */
+body {
+  background-color: #f4f7fc;
+  color: #333;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Get Started Button */
+#getStartedBtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#getStartedBtn:hover {
+  background-color: #45a049;
+}
+
+#getStartedBtn:active {
+  background-color: #387f35;
+}
+
+/* Form container styles */
+.form-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Initially positioned higher */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.form-container.show {
+  opacity: 1; /* Make visible when "show" class is added */
+  transform: translateY(0); /* Return to normal position */
+}
+
+/* Form Title */
+.form-container h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+select, button {
+  font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+select:focus, button:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Form Button styles */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="submit"]:active {
+  background-color: #387f35;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #getStartedBtn {
+    padding: 10px 20px;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+  }
+}
